@@ -1,0 +1,38 @@
+{
+  "name": "cmxperts/laravel-menu",
+  "description": "Drag and Drop Menu Generator for Laravel 10",
+  "keywords": [
+    "Laravel",
+    "Menu",
+    "Bootstrap",
+    "Builder"
+  ],
+  "authors": [
+    {
+      "name": "U D Parashar",
+      "email": "cmxperts@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "illuminate/support": "^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "CmXperts\\Menu\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "CmXperts\\Menu\\Providers\\MenuServiceProvider"
+      ],
+      "aliases": {
+        "Menu": "CmXperts\\Menu\\Facades\\Menu"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
