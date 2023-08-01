@@ -16,7 +16,7 @@ class MenuServiceProvider extends ServiceProvider
     public function boot()
     {
         if (!$this->app->routesAreCached()) {
-            require  __DIR__ . '/../../routes/web.php';
+            require  __DIR__ . '/../routes/web.php';
         }
 
         $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'cmxperts');
