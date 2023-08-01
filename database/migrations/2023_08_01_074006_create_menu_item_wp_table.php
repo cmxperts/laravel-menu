@@ -16,6 +16,7 @@ class CreateMenuItemWpTable extends Migration
         if (!Schema::hasTable(config('menu.table_prefix') . config('menu.table_name_items'))) {
             Schema::create(config('menu.table_prefix') . config('menu.table_name_items'), function (Blueprint $table) {
                 $table->bigIncrements('id');
+                $table->integer('role_id')->default(0);
                 $table->string('label');
                 $table->string('link');
                 $table->string('icon')->nullable();

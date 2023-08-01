@@ -34,14 +34,10 @@ class MenuServiceProvider extends ServiceProvider
         ], 'laravel-menu-public');
 
         $this->publishes([
-            __DIR__ . '/../../database/migrations/2017_08_11_073824_create_menus_wp_table.php'
-            => database_path('migrations/2017_08_11_073824_create_menus_wp_table.php'),
-            __DIR__ . '/../../database/migrations/2017_08_11_074006_create_menu_items_wp_table.php'
-            => database_path('migrations/2017_08_11_074006_create_menu_items_wp_table.php'),
-            __DIR__ . '/../../database/migrations/2019_01_05_293551_add-role-id-to-menu-items-table.php'
-            => database_path('2019_01_05_293551_add-role-id-to-menu-items-table.php'),
-            __DIR__ . '/../../database/migrations/2022_07_06_000123_add_class_to_menu_table.php'
-            => database_path('migrations/2022_07_15_000123_add_class_to_menu_table.php'),
+            __DIR__ . '/../../database/migrations/2023_08_01_073824_create_menu_wp_table.php'
+            => database_path('migrations/2023_08_01_073824_create_menu_wp_table.php'),
+            __DIR__ . '/../../database/migrations/2023_08_01_074006_create_menu_item_wp_table.php'
+            => database_path('migrations/2023_08_01_074006_create_menu_item_wp_table.php'),
         ], 'laravel-menu-migrations');
     }
 

@@ -17,6 +17,7 @@ class CreateMenuWpTable extends Migration
             Schema::create(config('menu.table_prefix') . config('menu.table_name_menus'), function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('name');
+                $table->string('class')->nullable();
                 $table->timestamps();
             });
         }
