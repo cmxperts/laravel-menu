@@ -34,10 +34,10 @@ class MenuServiceProvider extends ServiceProvider
         ], 'laravel-menu-public');
 
         $this->publishes([
-            __DIR__ . '/../../database/migrations/2023_08_01_073824_create_menu_wp_table.php'
-            => database_path('migrations/2023_08_01_073824_create_menu_wp_table.php'),
-            __DIR__ . '/../../database/migrations/2023_08_01_074006_create_menu_item_wp_table.php'
-            => database_path('migrations/2023_08_01_074006_create_menu_item_wp_table.php'),
+            __DIR__ . '/../../database/migrations/2023_08_01_073824_create_menu_table.php'
+            => database_path('migrations/2023_08_01_073824_create_menu_table.php'),
+            __DIR__ . '/../../database/migrations/2023_08_01_074006_create_menu_item_table.php'
+            => database_path('migrations/2023_08_01_074006_create_menu_item_table.php'),
         ], 'laravel-menu-migrations');
     }
 
