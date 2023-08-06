@@ -16,17 +16,27 @@ class CreateMenuItemTable extends Migration
         if (!Schema::hasTable(config('menu.table_prefix') . config('menu.table_name_items'))) {
             Schema::create(config('menu.table_prefix') . config('menu.table_name_items'), function (Blueprint $table) {
                 $table->bigIncrements('id');
-                $table->integer('role_id')->default(0);
-                $table->string('label');
-                $table->string('link');
-                $table->string('icon')->nullable();
-                $table->unsignedBigInteger('parent_id')->default(0);
-                $table->integer('ordering')->default(0);
-                $table->string('class')->nullable();
-                $table->enum('target', ['_self', '_blank'])->default('_self');
-                $table->unsignedBigInteger('menu_id')->index('cmx_menu_items_menu_id_foreign');
-                $table->integer('depth')->default(0);
+                $table->unsignedBigInteger('menu_id')->nullable()->index('cmx_menu_items_menu_id_foreign');
+                $table->unsignedBigInteger('parent_id')->nullable();
+                $table->string('type', 50)->default('menu');
+                $table->string('label', 100)->nullable();
+                $table->string('class', 100)->nullable();
+                $table->string('alias', 100)->nullable();
+                $table->text('description')->nullable();
+                $table->integer('depth')->nullable();
+                $table->string('icon', 30)->nullable();
+                $table->string('link', 100)->nullable();
+                $table->string('target', 100)->nullable();
+                $table->string('heading_position', 3)->nullable();
+                $table->string('image')->nullable();
+                $table->string('sub_line', 30)->nullable();
+                $table->string('sub_menu_class', 30)->nullable();
+                $table->unsignedBigInteger('ordering')->nullable();
+                $table->text('conditions')->nullable();
+                $table->text('active_class')->nullable();
+                $table->text('is_active')->nullable();
                 $table->timestamps();
+                $table->softDeletes();
 
                 $table->foreign(['menu_id'])->references(['id'])->on(config('menu.table_prefix') . config('menu.table_name_menus'))
                     ->onDelete('CASCADE')
