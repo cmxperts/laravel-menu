@@ -47,7 +47,7 @@
                     <div class="form-group">
                         <label for="">Icon</label>
                         <input id="icon-menu-{{$m['id']}}" class="form-control edit-menu-item-icon"
-                               name="icon-menu-{{$m['id']}}" value="{{$m['icon']}}">
+                               name="icon" value="{{$m['icon']}}">
                     </div>
                 @endif
                 @if(!empty($roles))
