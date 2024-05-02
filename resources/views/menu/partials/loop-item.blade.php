@@ -40,14 +40,24 @@
                                name="url-menu-{{$m['id']}}" value="{{$m['link']}}">
                     </div>
                     <div class="form-group">
+                        <label for="">Conditions</label>
+                        <input id="conditions-menu-{{$m['id']}}" class="form-control edit-menu-item-classes"
+                               name="conditions-menu-{{$m['id']}}" value="{{$m['conditions']}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Is Active</label>
+                        <input id="is_active-menu-{{$m['id']}}" class="form-control edit-menu-item-classes"
+                               name="is_active-menu-{{$m['id']}}" value="{{$m['is_active']}}">
+                    </div>
+                    <div class="form-group">
                         <label for="">Class CSS (optional)</label>
                         <input id="clases-menu-{{$m['id']}}" class="form-control edit-menu-item-classes"
                                name="clases-menu-{{$m['id']}}" value="{{$m['class']}}">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group edit-menu-item-icon">
                         <label for="">Icon</label>
-                        <input id="icon-menu-{{$m['id']}}" class="form-control edit-menu-item-icon"
-                               name="icon" value="{{$m['icon']}}">
+                        <button class="btn btn-primary" name="icon-menu-{{$m['id']}}" id="icon-menu-{{$m['id']}}" data-icon="{{$m['icon']}}"
+                                role="iconpicker"></button>
                     </div>
                 @endif
                 @if(!empty($roles))

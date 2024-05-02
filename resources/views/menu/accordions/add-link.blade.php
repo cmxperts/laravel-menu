@@ -21,7 +21,9 @@
                 <input type="hidden" class="form-control" name="type" value="menu">
                 <div class="form-group">
                     <label for="label">Enter Label</label>
-                    <input type="text" class="form-control" name="label" placeholder="Label Menu">
+                    <input type="text" class="form-control" onchange="
+                        this.parentNode.parentNode.querySelector('#linkUrl').value = '#'+ toCamelCase(this.value)
+                    " name="label" placeholder="Label Menu">
                 </div>
                 <div class="form-group">
                     <label for="url">Enter URL</label>
@@ -60,3 +62,9 @@
         </div>
     </div>
 </div>
+
+<script>
+    function toCamelCase(str) {
+        return str.toLowerCase().replace(/[-_\s]+(.)?/g, (_, c) => c ? c.toUpperCase() : '');
+    }
+</script>

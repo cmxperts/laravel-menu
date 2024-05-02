@@ -84,7 +84,7 @@ function updateItem(id = 0) {
         var label = $('#label-menu-' + id).val();
         var clases = $('#clases-menu-' + id).val();
         var url = $('#url-menu-' + id).val();
-        var icon = $('#icon-menu-' + id).val();
+        var icon = $('#icon-menu-' + id + ' input').val();
         var target = $('#target-menu-' + id).val();
         var role_id = 0;
         if ($('#role_menu_' + id).length) {
@@ -120,7 +120,7 @@ function updateItem(id = 0) {
                 .find('.edit-menu-item-url')
                 .val();
             var icon = $(this)
-                .find('.edit-menu-item-icon')
+                .find('.edit-menu-item-icon input')
                 .val();
             var role = $(this)
                 .find('.edit-menu-item-role')
