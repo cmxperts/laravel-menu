@@ -14,7 +14,7 @@ class MenuController extends Controller
 {
     public function create(Request $request)
     {
-        $menu = new Menus();
+        $menu = new Menu();
         $menu->name = $request->input('name');
         $menu->class = $request->input('class', null);
         $menu->save();
